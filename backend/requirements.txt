@@ -6,6 +6,8 @@ python-multipart
 langchain
 langchain-aws
 langchain-community
+langchain-core
+langchain-classic
 langchain-text-splitters
 faiss-cpu
 pypdf
