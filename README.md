@@ -1,5 +1,8 @@
 # Retrieva_AI — React + FastAPI + Amazon Bedrock RAG
 
+application demo - <img width="1669" height="968" alt="image" src="https://github.com/user-attachments/assets/7cef9a82-718b-46f7-865d-719814d248da" />
+
+
 ## Features
 - Upload one or more PDF files from the React sidebar.
 - FastAPI validates and saves PDFs in `backend/data`.
@@ -16,22 +19,32 @@ Open a terminal in the `backend` directory:
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
-copy .env.example .env
 ```
 
-Configure AWS credentials with an identity that can invoke the selected Bedrock chat and embedding models:
+Create a local `.env` file in `backend` (there is no checked-in `.env.example`) and configure:
+
+```dotenv
+AWS_REGION=<your-aws-region>
+BEDROCK_MODEL_ID=<your-bedrock-chat-model-id>
+BEDROCK_EMBEDDING_MODEL_ID=<your-bedrock-embedding-model-id>
+DATA_DIR=<path-to-pdf-data-directory>
+CHUNK_SIZE=<chunk-size>
+CHUNK_OVERLAP=<chunk-overlap>
+RETRIEVAL_K=<number-of-retrieved-chunks>
+MAX_UPLOAD_MB=<maximum-upload-size-in-mb>
+```
+
+Keep `.env` local; it is excluded from Git. Configure AWS credentials with an identity that can invoke the selected Bedrock chat and embedding models:
 
 ```powershell
 aws configure
 ```
 
-Edit `.env` if your AWS region or model IDs differ. Then start FastAPI:
+The documented FastAPI entry point is `app.main:app`. The current workspace does not include `backend/app/main.py`, so restore or add that module before starting the API:
 
 ```powershell
 uvicorn app.main:app --reload --port 8000
 ```
-
-Swagger docs: http://localhost:8000/docs
 
 ## 2. Frontend setup
 Open a second terminal in `frontend`:
