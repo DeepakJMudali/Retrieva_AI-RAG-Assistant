@@ -43,8 +43,6 @@ The documented FastAPI entry point is `app.main:app`. The current workspace does
 uvicorn app.main:app --reload --port 8000
 ```
 
-Swagger docs: http://localhost:8000/docs
-
 ## 2. Frontend setup
 Open a second terminal in `frontend`:
 
