@@ -31,7 +31,7 @@ Edit `.env` if your AWS region or model IDs differ. Then start FastAPI:
 uvicorn app.main:app --reload --port 8000
 ```
 
-Swagger docs: http://localhost:8000/docs
+
 
 ## 2. Frontend setup
 Open a second terminal in `frontend`:
