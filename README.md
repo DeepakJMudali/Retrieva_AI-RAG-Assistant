@@ -1,7 +1,8 @@
 # Retrieva_AI — React + FastAPI + Amazon Bedrock RAG
 
-application demo - <img width="1669" height="968" alt="image" src="https://github.com/user-attachments/assets/7cef9a82-718b-46f7-865d-719814d248da" />
+application demo -
 
+<img width="1678" height="937" alt="image" src="https://github.com/user-attachments/assets/3e9f4383-5fc4-443b-9261-ec55ecf401f4" />
 
 ## Features
 - Upload one or more PDF files from the React sidebar.
